@@ -7,7 +7,7 @@ module.exports = {
         BOT_ID: process.env.BOT_ID,
         USER_ID: process.env.BOT_ID,
         SERVER_URL: process.env.SERVER_URL,
-        BOT_HOST:"https://"+process.env.BOT_ID+".herokuapp.com/"
+        BOT_HOST:"https://"+process.env.BOT_NAME+".herokuapp.com/"
     },
     ADAPTER: {
         FACEBOOK: {
