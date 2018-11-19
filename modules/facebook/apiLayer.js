@@ -106,7 +106,7 @@ function setupWebhook() {
                body:JSON.stringify(formData)
             }
 
-            console.log("url_body:"+options);
+            console.log("url_body:"+JSON.stringify(options));
         
             request(options, function (err, res, body) {
                 if (err) {
