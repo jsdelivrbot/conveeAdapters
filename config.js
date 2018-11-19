@@ -5,7 +5,7 @@ module.exports = {
 
     CONVEE: {
         BOT_ID: process.env.BOT_ID,
-        USER_ID: process.env.BOT_ID,
+        USER_ID: process.env.USER_ID,
         SERVER_URL: process.env.SERVER_URL,
         BOT_HOST:"https://"+process.env.BOT_NAME+".herokuapp.com/"
     },
