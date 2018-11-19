@@ -19,7 +19,7 @@
 
 #public folder
 /public
-/bin/certs
+#/bin/certs
 
 #database
 userDatabase.json
