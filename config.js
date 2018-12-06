@@ -13,16 +13,16 @@ module.exports = {
         FACEBOOK: {
             ENABLED: true,
             MESSENGER_WEBHOOK:"/fb_webhook",
-            MESSENGER_APP_ID: "1116053291891275",
-            MESSENGER_ACCESS_TOKEN: "EAAP3C2gDeksBAPgw0oPLjKtke47wX9IsNZCZClWcbYLLI5kLwPnh8Lp6DOuMeOuQtnlB2AvbuAYqKGigT1KeULXs7joIXTJ7fIZBOwPAK1iDcNj5O1lZCUbb31OVnGm2aLZCRZCsONilRP8qviO6V8TxFs2pbGmZCeLc24nLSCcAZBZCjkpl8yz7h",
-            MESSENGER_APP_SECRET: "b2bc174a8c8c33294764aaba925899be",
+            MESSENGER_APP_ID: process.env.MESSENGER_APP_ID,
+            MESSENGER_ACCESS_TOKEN:process.env.MESSENGER_ACCESS_TOKEN,
+            MESSENGER_APP_SECRET: process.env.MESSENGER_APP_SECRET,
             MESSENGER_VERIFY_TOKEN: "convee_adapter"
         },
 
         TELEGRAM:{
             ENABLED: true,
             MESSENGER_WEBHOOK:"/tg_webhook",
-            TOKEN:"655704211:AAGeiuWsoTvdOr1n0Y6VpUIiQb5FfhWfaRM"
+            TOKEN:process.env.TELEGRAM_TOKEN
         }
 
     }
