@@ -104,7 +104,7 @@ function checkIfPromptInputIsCorrect(text, SentMessage, ResultResponse) {
 
             // SET IF WE NEED MENU TRIGGER
             ResultResponse.StartMenuTrigger = false;
-            ResultResponse.ReturnMessage = "Please enter valid age";
+            ResultResponse.ReturnMessage = "Please enter valid option as yes or no";
           }
           else {
             // SET IF WE NEED MENU TRIGGER
@@ -123,6 +123,31 @@ function checkIfPromptInputIsCorrect(text, SentMessage, ResultResponse) {
         }
       }
       break;
+
+      case '@sys.choice':
+      {
+        if (
+          text.toLowerCase() === 'yes' || text.toLowerCase() === 'yup' ||
+          text.toLowerCase() === 'yea' || text.toLowerCase() === 'y' ||
+          text.toLowerCase() === '1' || text.toLowerCase() === 'no' ||
+          text.toLowerCase() === 'nope' || text.toLowerCase() === 'na' ||
+          text.toLowerCase() === 'n' || text.toLowerCase() === '0') {
+
+          // SET VALID FLAG
+          ResultResponse.isValid = true;
+          ResultResponse.StartMenuTrigger = false;
+          ResultResponse.ReturnMessage = "Ok";
+
+        }
+        else {
+          ResultResponse.ReturnMessage = "Please type 'yes' or 'no'";
+          ResultResponse.isValid = false;
+          ResultResponse.StartMenuTrigger = false;
+
+        }
+      }
+      break;
+
     default:
       console.log("Entity type not found..");
   }

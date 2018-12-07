@@ -250,7 +250,7 @@ function SendMessage(type, envelope, FilteredMessageArray, MainMessageArray, res
             break;
         case messageType.PROMPT:
             {
-                if (FilteredMessageArray[0].entityType === '@sys.confirm') {
+                if (FilteredMessageArray[0].entityType === '@sys.confirm'||FilteredMessageArray[0].entityType === '@sys.choice') {
                     facebookController.sendConfirmPrompt(envelope.sender_id, FilteredMessageArray[0], DurationTime);
                 }
                 else {

@@ -109,7 +109,7 @@ function sendImageMessage(sender_id, message, delay) {
 function sendConfirmPrompt(sender_id, message, delay) {
   setTimeout(function () {
     bot.sendMessage(sender_id, formatHelper.constructAndReturnConfirmPromptMessage(message));
-  }, delay);
+  }, delay+1000);
 }
 
 function sendButtonMessage(sender_id, intentName, message, delay) {
